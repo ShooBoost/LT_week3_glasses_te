@@ -1,0 +1,263 @@
+// branchBanner 開始
+.branchBanner {
+    padding: 0px 48px;
+    position: relative;
+    height: 304px;
+    @include mobile {
+        height: 143px;
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    &::after {
+        background-image: url('../assets/branch/72.png');
+        content: '';
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    h2 {
+        font: 64px/80px PingFang TC;
+        font-weight: $font-size-Medium;
+        display: flex;
+        align-items: center;
+        @include pad {
+            font: 48px/80px PingFang TC;
+            font-weight: $font-size-Medium;
+        }
+        @include mobile {
+            font: 28px/80px PingFang TC;
+            font-weight: $font-size-Medium;
+        }
+    }
+    img {
+        margin-left: 24px;
+        @include pad {
+            margin-left: 16px;
+            width: 30px;
+        }
+        @include mobile {
+            margin-left: 8px;
+            width: 16px;
+        }
+    }
+}
+// branchBanner 結束
+
+// .branchDemo 開始
+.branchDemo {
+    padding: 16px 48px 0px 48px;
+    margin-bottom: 126px;
+    @include pad {
+        padding: 8px 12px 0px 12px;
+        margin-bottom: 80px;
+    }
+    @include mobile {
+        padding: 8px 48px 0px 48px;
+        margin-bottom: 80px;
+    }
+}
+// .branchDemoSearchBar 開始
+.branchDemoSearchBar {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    @include pad {
+        margin-bottom: 24px;
+    }
+    @include mobile {
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    label {
+        font: 24px/30px PingFang TC;
+        font-size: $font-size-Regular;
+        margin-right: 22px;
+        @include pad {
+            font: 16px/30px PingFang TC;
+            font-size: $font-size-Regular;
+            margin-right: 23px;
+        }
+        @include mobile {
+            font: 14px/30px PingFang TC;
+            font-size: $font-size-Regular;
+            margin-right: 16px;
+        }
+    }
+    select {
+        width: 266px;
+        padding: 10px 12px 10px 19px;
+        font: 18px/22px Helvetica Neue;
+        font-weight: $font-size-Regular;
+        appearance: none;
+        background-color: $color-white;
+        border-radius: 0;
+        border: 1px solid $color-light-blue;
+        @include pad {
+            width: 237px;
+            font: 16px/24px PingFang TC;
+            font-weight: $font-size-Regular;
+            padding: 12px 16px;
+        }
+        @include mobile {
+            width: 70%;
+            font: 14px/24px PingFang TC;
+            font-weight: $font-size-Regular;
+            padding: 8px 16px;
+        }
+    }
+}
+// .branchDemoSearchBar 結束
+// branchDemoList 開始
+.branchDemoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mobile {
+        margin-bottom: 20px;
+    }
+}
+.branchDemoItem {
+    width: 32%;
+    border: 1px solid $color-light-blue;
+    margin-bottom: 28px;
+    @include pad {
+        width: 48.2%;
+        margin-bottom: 24px;
+    }
+    @include mobile {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .branchDemoItemImg {
+        width: 100%;
+    }
+    h3 {
+        font: 24px/33px PingFang TC;
+        font-weight: $font-size-Medium;
+        padding: 16px 24px;
+        border-bottom: 1px solid $color-light-blue;
+        @include pad {
+            font: 16px/24px PingFang TC;
+            font-weight: $font-size-Medium;
+            padding: 8px 16px;
+        }
+    }
+    a {
+        width: 100%;
+        height: 68px;
+        display: block;
+        background-color: $color-black;
+        text-align: center;
+        font: 20px/68px PingFang TC;
+        font-weight: $font-size-Regular;
+        color: $color-white;
+        @include pad {
+            height: 52px;
+            font: 14px/52px PingFang TC;
+            font-weight: $font-size-Regular;
+        }
+    }
+}
+// branchDemoList 結束
+// branchInfoList 開始
+.branchInfoList {
+    padding: 16px 36px;
+    @include pad {
+        padding: 16px;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    p {
+        display: flex;
+        font: 20px/28px PingFang TC;
+        font-weight: $font-size-Regular;
+        @include pad {
+            font: 14px/21px PingFang TC;
+            font-weight: $font-size-Regular;
+        }
+    }
+    li:nth-child(1){
+        img {
+            margin-right: 8px;
+            @include pad {
+                width: 21px;
+                margin-right: 13px;
+            }
+        }
+
+    }
+    li:nth-child(2){
+        img {
+            margin-right: 9px;
+            margin-left: 1px;
+            @include pad {
+                width: 16px;
+                margin-right: 16px;
+                margin-left: 3px;
+            }
+        }
+    }
+    li:nth-child(3){
+        p {
+            align-items: flex-start;
+        }
+        img {
+            margin-right: 12px;
+            margin-left: 4px;
+            @include pad {
+                width: 12px;
+                margin-right: 18px;
+                margin-left: 5px;
+            }
+        }
+    }
+
+}
+// branchInfoList 結束
+
+.pageTag * {
+    // border: 1px solid $color-dark-gray;
+}
+.pageTag {
+    display: none;
+    @include mobile {
+        display: flex;
+    }
+}
+
+.pageTag {
+    justify-content: center;
+    a {
+        display: block;
+        font: 12px/18px Roboto;
+        font-weight: $font-size-Regular;
+        color: $color-gray;
+        padding: 8px 10px;
+        // border: 1px solid $color-gray;
+    }
+    .prePage, .nextPage {
+        border: 1px solid $color-gray;
+    }
+    .prePage {
+        border-right: 0px;
+    }
+}
+.pageTagList {
+    display: flex;
+    li {
+        border: 1px solid $color-gray;
+        border-right: 0px;
+    }
+
+}
