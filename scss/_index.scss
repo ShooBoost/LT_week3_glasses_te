@@ -5,8 +5,6 @@ html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
-
-
 .flex {
     display: flex;
 }
@@ -573,6 +571,7 @@ html, body {
         padding: 0px 14px 0px 12px;
     }
     p {
+        position: relative;
         width: 92%;
         font: 72px/72px Roboto;
         font-weight: $font-size-Blod;
@@ -591,12 +590,58 @@ html, body {
     }
     img {
         width: auto;
+        position: relative;
+        left: 0;
+        transition: 1s;
         @include pad {
             width: 27px;
         }
         @include mobile {
             width: 18px;
         }
+    }
+    p::before, p::after {
+        position: absolute;
+        content: 'MORE';
+        color: $color-red;
+        top: 0;
+        left: 0;
+        transition: 1s;
+        opacity: 0.7;
+    }
+    p::after {
+        opacity: 0.3;
+    }
+    &:hover {
+        p::before {
+            top: -80px;
+            @include pad {
+                top: -40px;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        p::after {
+            top: -150px;
+            @include pad {
+                top: -80px;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        img {
+            position: relative;
+            left: 10px;
+            @include pad {
+                left: 6px;
+            }
+            @include mobile {
+                left: 0px;
+            }
+        }
+
     }
 }
 .coBrandCategoryList {

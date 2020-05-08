@@ -1348,6 +1348,7 @@ html, body {
 }
 
 .moreBtnTextBody p {
+  position: relative;
   width: 92%;
   font: 72px/72px Roboto;
   font-weight: 700;
@@ -1373,6 +1374,10 @@ html, body {
 
 .moreBtnTextBody img {
   width: auto;
+  position: relative;
+  left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (max-width: 992px) {
@@ -1384,6 +1389,70 @@ html, body {
 @media (max-width: 768px) {
   .moreBtnTextBody img {
     width: 18px;
+  }
+}
+
+.moreBtnTextBody p::before, .moreBtnTextBody p::after {
+  position: absolute;
+  content: 'MORE';
+  color: #AA0601;
+  top: 0;
+  left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0.7;
+}
+
+.moreBtnTextBody p::after {
+  opacity: 0.3;
+}
+
+.moreBtnTextBody:hover p::before {
+  top: -80px;
+}
+
+@media (max-width: 992px) {
+  .moreBtnTextBody:hover p::before {
+    top: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .moreBtnTextBody:hover p::before {
+    display: none;
+  }
+}
+
+.moreBtnTextBody:hover p::after {
+  top: -150px;
+}
+
+@media (max-width: 992px) {
+  .moreBtnTextBody:hover p::after {
+    top: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .moreBtnTextBody:hover p::after {
+    display: none;
+  }
+}
+
+.moreBtnTextBody:hover img {
+  position: relative;
+  left: 10px;
+}
+
+@media (max-width: 992px) {
+  .moreBtnTextBody:hover img {
+    left: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .moreBtnTextBody:hover img {
+    left: 0px;
   }
 }
 
